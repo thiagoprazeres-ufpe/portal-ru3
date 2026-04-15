@@ -1,0 +1,380 @@
+@config "../../../tailwind.config.cjs";
+@import "@fontsource-variable/geist";
+@import "tailwindcss";
+@import "./tokens.css";
+@source "../../../*.php";
+@source "../../../**/*.php";
+@source "../js/**/*.js";
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-body antialiased bg-base-100 text-base-content;
+  }
+
+  a {
+    @apply underline-offset-4 transition-colors duration-200;
+  }
+
+  img {
+    @apply block h-auto max-w-full;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-content);
+  }
+
+  [data-lucide] {
+    @apply inline-block h-[1em] w-[1em] shrink-0 align-middle;
+  }
+}
+
+@layer components {
+
+  /* ── Buttons ──────────────────────────────────────── */
+  .btn {
+    @apply inline-flex select-none cursor-pointer items-center justify-center gap-1.5 rounded-md px-4 py-2.5 text-sm font-semibold leading-none tracking-tight no-underline transition-all duration-150 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-5 py-3 text-base;
+  }
+
+  .btn-square {
+    @apply size-10 p-0;
+  }
+
+  .btn-wide {
+    @apply w-full justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-content hover:opacity-90 active:scale-[.97];
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-content hover:opacity-90 active:scale-[.97];
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-content hover:opacity-90 active:scale-[.97];
+  }
+
+  .btn-neutral {
+    @apply bg-neutral text-neutral-content hover:opacity-90 active:scale-[.97];
+  }
+
+  .btn-outline {
+    @apply bg-base-200 text-base-content hover:bg-base-300 active:scale-[.97];
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-base-content hover:bg-base-200 active:scale-[.97];
+  }
+
+  /* ── Button group ─────────────────────────────────── */
+  .btn-group {
+    @apply inline-flex;
+  }
+
+  .btn-group .btn {
+    @apply rounded-none first:rounded-l-md last:rounded-r-md;
+  }
+
+  .btn-group-col {
+    @apply inline-flex flex-col;
+  }
+
+  .btn-group-col .btn {
+    @apply rounded-none first:rounded-t-md last:rounded-b-md;
+  }
+
+  @media (min-width: 640px) {
+    .btn-group-sm-row {
+      @apply inline-flex;
+    }
+
+    .btn-group-sm-row .btn {
+      @apply rounded-none first:rounded-l-md last:rounded-r-md;
+    }
+  }
+
+  /* ── Tags / Chips ─────────────────────────────────── */
+  .tag {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold leading-none whitespace-nowrap;
+  }
+
+  .tag-lg {
+    @apply px-3 py-1 text-sm;
+  }
+
+  .tag-sm {
+    @apply px-2 py-px text-[0.65rem];
+  }
+
+  .tag-primary {
+    @apply bg-primary text-primary-content;
+  }
+
+  .tag-secondary {
+    @apply bg-secondary text-secondary-content;
+  }
+
+  .tag-accent {
+    @apply bg-accent text-accent-content;
+  }
+
+  .tag-neutral {
+    @apply bg-neutral text-neutral-content;
+  }
+
+  .tag-success {
+    @apply bg-success text-success-content;
+  }
+
+  .tag-warning {
+    @apply bg-warning text-warning-content;
+  }
+
+  .tag-error {
+    @apply bg-error text-error-content;
+  }
+
+  .tag-info {
+    @apply bg-info text-info-content;
+  }
+
+  .tag-outline {
+    @apply bg-base-200 text-base-content;
+  }
+
+  .tag-outline-primary {
+    @apply bg-primary text-primary-content;
+  }
+
+  .tag-outline-secondary {
+    @apply bg-secondary text-secondary-content;
+  }
+
+  .tag-outline-accent {
+    @apply bg-accent text-accent-content;
+  }
+
+  .tag-outline-success {
+    @apply bg-success text-success-content;
+  }
+
+  .tag-outline-warning {
+    @apply bg-warning text-warning-content;
+  }
+
+  .tag-outline-error {
+    @apply bg-error text-error-content;
+  }
+
+  .tag-outline-neutral {
+    @apply bg-neutral text-neutral-content;
+  }
+
+  .tag-outline-info {
+    @apply bg-info text-info-content;
+  }
+
+  /* ── Cards ────────────────────────────────────────── */
+  .card {
+    @apply overflow-hidden bg-base-100;
+  }
+
+  .card-body {
+    @apply flex flex-col gap-4 p-5 md:p-6;
+  }
+
+  .card-title {
+    @apply text-xl font-semibold leading-snug tracking-tight text-base-content;
+  }
+
+  .card-actions {
+    @apply flex flex-wrap items-center gap-2 mt-auto;
+  }
+
+  /* ── Notices ──────────────────────────────────────── */
+  .notice {
+    @apply flex items-start gap-3 rounded-md p-4 text-sm leading-relaxed font-medium;
+  }
+
+  .notice-info {
+    @apply bg-azul-claro text-cinza-escuro;
+  }
+
+  .notice-success {
+    @apply bg-verde-claro text-verde-escuro;
+  }
+
+  .notice-warning {
+    @apply bg-amarelo-claro text-primary-content;
+  }
+
+  .notice-error {
+    @apply bg-vermelho-claro text-vermelho-escuro;
+  }
+
+  /* ── Divider ──────────────────────────────────────── */
+  .divider {
+    @apply my-4 h-px w-full bg-base-border;
+  }
+
+  /* ── Stat items ───────────────────────────────────── */
+  .stat-box {
+    @apply rounded-md bg-base-100 overflow-hidden;
+  }
+
+  .stat-row {
+    @apply flex flex-col gap-0.5 p-4;
+  }
+
+  .stat-row-label {
+    @apply text-xs font-semibold uppercase tracking-widest text-base-muted;
+  }
+
+  .stat-row-value {
+    @apply text-2xl font-bold tracking-tight text-base-content;
+  }
+
+  .stat-row-desc {
+    @apply text-sm text-base-muted;
+  }
+
+  /* ── Forms ────────────────────────────────────────── */
+  .input {
+    @apply w-full rounded-md bg-base-200 px-4 py-2.5 text-sm text-base-content placeholder:text-base-muted focus:bg-base-300 focus:outline-none transition-colors;
+  }
+
+  /* ── WordPress nav menus ──────────────────────────── */
+  .nav-drawer {
+    @apply fixed inset-y-0 left-0 z-50 w-64 -translate-x-full bg-base-100 transition-transform duration-200 ease-in-out overflow-y-auto;
+  }
+
+  .nav-drawer.is-open {
+    @apply translate-x-0;
+  }
+
+  .nav-overlay {
+    @apply fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-200;
+  }
+
+  .nav-overlay.is-open {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  .nav-menu li {
+    @apply block;
+  }
+
+  .nav-menu a {
+    @apply flex px-5 py-3 text-sm font-medium text-base-content no-underline transition-colors hover:bg-base-200;
+  }
+
+  .nav-menu .current-menu-item>a {
+    @apply bg-primary text-primary-content font-semibold;
+  }
+
+  /* ── Rich text prose ─────────────────────────────── */
+  .prose-ru {
+    @apply space-y-5 text-base leading-8 text-base-content;
+  }
+
+  .prose-ru a {
+    @apply underline underline-offset-2 hover:text-primary;
+  }
+
+  .prose-ru h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  .prose-ru h3 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+
+  .prose-ru ul {
+    @apply list-disc pl-5;
+  }
+
+  .prose-ru ol {
+    @apply list-decimal pl-5;
+  }
+
+  .prose-ru p {
+    @apply m-0;
+  }
+
+  .prose-ru blockquote {
+    @apply bg-base-200 px-4 py-3 rounded-md italic text-base-muted;
+  }
+
+  .prose-ru figure {
+    @apply overflow-hidden rounded-md;
+  }
+
+  /* ── Day-of-week color block bar (flat bg strip) ───── */
+  .day-seg .card-body::before,
+  .day-ter .card-body::before,
+  .day-qua .card-body::before,
+  .day-qui .card-body::before,
+  .day-sex .card-body::before,
+  .day-sab .card-body::before,
+  .day-dom .card-body::before {
+    content: "";
+    display: block;
+    height: 6px;
+    margin: calc(-1 * var(--spacing) * 5) calc(-1 * var(--spacing) * 5) var(--spacing-4);
+  }
+
+  @media (min-width: 768px) {
+
+    .day-seg .card-body::before,
+    .day-ter .card-body::before,
+    .day-qua .card-body::before,
+    .day-qui .card-body::before,
+    .day-sex .card-body::before,
+    .day-sab .card-body::before,
+    .day-dom .card-body::before {
+      margin: calc(-1 * var(--spacing) * 6) calc(-1 * var(--spacing) * 6) var(--spacing-4);
+    }
+  }
+
+  .day-seg .card-body::before {
+    background: var(--color-seg);
+  }
+
+  .day-ter .card-body::before {
+    background: var(--color-ter);
+  }
+
+  .day-qua .card-body::before {
+    background: var(--color-qua);
+  }
+
+  .day-qui .card-body::before {
+    background: var(--color-qui);
+  }
+
+  .day-sex .card-body::before {
+    background: var(--color-sex);
+  }
+
+  .day-sab .card-body::before {
+    background: var(--color-sab);
+  }
+
+  .day-dom .card-body::before {
+    background: var(--color-dom);
+  }
+}

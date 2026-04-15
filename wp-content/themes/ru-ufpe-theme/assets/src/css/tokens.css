@@ -1,0 +1,74 @@
+@theme {
+    /* === Paleta RU UFPE — Identidade Visual (pixel-amostrada do PDF) === */
+
+    /* Amarelo Ovo */
+    --color-amarelo: #EEAB1E;
+    --color-amarelo-claro: #E9CB83;
+
+    /* Verde Alface */
+    --color-verde-escuro: #5F9336;
+    --color-verde: #87C75F;
+    --color-verde-claro: #BDE486;
+
+    /* Azul Frescor */
+    --color-azul-escuro: #50A2C6;
+    --color-azul: #66C6F1;
+    --color-azul-claro: #B1E5EE;
+
+    /* Vermelho Melancia */
+    --color-vermelho-escuro: #9F1929;
+    --color-vermelho: #E33D5D;
+    --color-vermelho-claro: #F47293;
+
+    /* Cinza Panela */
+    --color-cinza-escuro: #344348;
+    --color-cinza: #5F6F76;
+    --color-cinza-claro: #B1CACE;
+
+    /* Cardápio semanal — cor por dia da semana */
+    --color-seg: #EEAB1E;
+    /* Amarelo Ovo   */
+    --color-ter: #E33D5D;
+    /* Vermelho Mel. */
+    --color-qua: #66C6F1;
+    /* Azul Frescor  */
+    --color-qui: #87C75F;
+    /* Verde Alface  */
+    --color-sex: #9F1929;
+    /* Vermelho esc. */
+    --color-sab: #5F6F76;
+    /* Cinza Panela  */
+    --color-dom: #344348;
+    /* Cinza esc.    */
+
+    /* Semânticos */
+    --color-primary: #EEAB1E;
+    --color-primary-content: #1A0E00;
+
+    --color-secondary: #87C75F;
+    --color-secondary-content: #0D1A00;
+
+    --color-accent: #E33D5D;
+    --color-accent-content: #FFFFFF;
+
+    --color-neutral: #344348;
+    --color-neutral-content: #E8F0F3;
+
+    /* Estados */
+    --color-success: #5F9336;
+    --color-success-content: #FFFFFF;
+    --color-warning: #EEAB1E;
+    --color-warning-content: #1A0E00;
+    --color-error: #9F1929;
+    --color-error-content: #FFFFFF;
+    --color-info: #50A2C6;
+    --color-info-content: #FFFFFF;
+
+    /* Bases — fundo creme quente */
+    --color-base-100: #FFFDF8;
+    --color-base-200: #F5F0E8;
+    --color-base-300: #EBE3D5;
+    --color-base-content: #1C1814;
+    --color-base-muted: #7A6E60;
+    --color-base-border: #DDD5C4;
+}

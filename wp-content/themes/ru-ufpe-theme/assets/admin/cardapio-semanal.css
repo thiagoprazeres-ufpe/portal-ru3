@@ -1,0 +1,120 @@
+.ru-weekly-menu-admin {
+  display: grid;
+  gap: 20px;
+}
+
+.ru-weekly-menu-toolbar {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #dcdcde;
+  background: #fff;
+}
+
+.ru-weekly-menu-toolbar-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.ru-weekly-menu-toolbar label,
+.ru-weekly-menu-item-row label {
+  display: grid;
+  gap: 6px;
+}
+
+.ru-weekly-menu-toolbar select,
+.ru-weekly-menu-toolbar input,
+.ru-weekly-menu-item-row input {
+  width: 100%;
+}
+
+.ru-weekly-menu-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ru-weekly-menu-day-card {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #dcdcde;
+  background: #fff;
+}
+
+.ru-weekly-menu-day-card > h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ru-weekly-menu-meal-card {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e2e4e7;
+  background: #f6f7f7;
+}
+
+.ru-weekly-menu-meal-card.is-hidden {
+  display: none;
+}
+
+.ru-weekly-menu-meal-header h3,
+.ru-weekly-menu-section h4 {
+  margin: 0;
+}
+
+.ru-weekly-menu-section {
+  display: grid;
+  gap: 12px;
+}
+
+.ru-weekly-menu-items {
+  display: grid;
+  gap: 12px;
+}
+
+.ru-weekly-menu-item-row {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #dcdcde;
+  background: #fff;
+  grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr) minmax(220px, 1fr) auto;
+  align-items: start;
+}
+
+.ru-weekly-menu-item-row .button-link-delete {
+  align-self: center;
+}
+
+.ru-weekly-menu-flag-group {
+  margin: 0;
+  padding: 10px 12px 12px;
+  border: 1px solid #dcdcde;
+}
+
+.ru-weekly-menu-flag-group legend {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.ru-weekly-menu-flag-options {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.ru-weekly-menu-flag-options label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+}
+
+@media (max-width: 960px) {
+  .ru-weekly-menu-item-row {
+    grid-template-columns: 1fr;
+  }
+}
