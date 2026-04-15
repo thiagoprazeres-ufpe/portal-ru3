@@ -1,0 +1,35 @@
+name: Deploy homolog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy theme to homolog
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y rsync openssh-client
+
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.REMOTE_SSH_KEY }}
+
+      - name: Deploy theme to homolog
+        run: bash scripts/deploy-homolog-theme.sh --apply
+        env:
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          HOST_HEADER: ${{ secrets.HOST_HEADER }}
+          REMOTE_STAGE_DIR: ${{ secrets.REMOTE_STAGE_DIR }}
+          REMOTE_THEME_DIR: ${{ secrets.REMOTE_THEME_DIR }}
+          WP_PATH: ${{ secrets.WP_PATH }}
