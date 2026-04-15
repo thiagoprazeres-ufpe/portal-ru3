@@ -28,6 +28,9 @@
 
 # Optional: ignore plugin directories if this repo is only theme-focused
 /wp-content/plugins/
+/wp-content/languages/
+/wp-content/index.php
+/wp-content/themes/index.php
 
 # Node and build artifacts
 node_modules/
