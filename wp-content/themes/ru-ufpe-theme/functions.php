@@ -1,5 +1,8 @@
+<?php
 
 require_once get_template_directory() . '/inc/cardapio-semanal.php';
+require_once get_template_directory() . '/inc/ufpe-id-auth.php';
+require_once get_template_directory() . '/inc/ufpe-id-comments.php';
 
 function ru_ufpe_theme_setup() {
 	add_theme_support( 'title-tag' );

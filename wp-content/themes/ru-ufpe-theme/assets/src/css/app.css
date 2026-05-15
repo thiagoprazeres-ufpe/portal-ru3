@@ -257,6 +257,47 @@
     @apply w-full rounded-md bg-base-200 px-4 py-2.5 text-sm text-base-content placeholder:text-base-muted focus:bg-base-300 focus:outline-none transition-colors;
   }
 
+  .ru-ufpe-id-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-base-200 px-3 py-2 text-sm font-semibold text-base-content no-underline transition-colors hover:bg-base-300;
+  }
+
+  .ru-ufpe-id-button img,
+  .ru-ufpe-id-account img {
+    @apply size-6 shrink-0 rounded-sm;
+  }
+
+  .ru-ufpe-id-button-compact span {
+    @apply hidden sm:inline;
+  }
+
+  .ru-ufpe-id-account {
+    @apply hidden items-center gap-2 rounded-md bg-base-200 px-3 py-2 text-sm text-base-content sm:inline-flex;
+  }
+
+  .ru-ufpe-id-account span {
+    @apply flex min-w-0 flex-col leading-tight;
+  }
+
+  .ru-ufpe-id-account strong {
+    @apply text-xs font-semibold;
+  }
+
+  .ru-ufpe-id-account small {
+    @apply max-w-40 truncate text-[0.68rem] text-base-muted;
+  }
+
+  .ru-ufpe-id-account a {
+    @apply text-xs font-semibold text-base-muted no-underline hover:text-base-content;
+  }
+
+  .ru-ufpe-id-unavailable {
+    @apply hidden rounded-md bg-base-200 px-3 py-2 text-xs font-semibold text-base-muted sm:inline-flex;
+  }
+
+  .ru-auth-notice {
+    @apply my-1;
+  }
+
   /* ── WordPress nav menus ──────────────────────────── */
   .nav-drawer {
     @apply fixed inset-y-0 left-0 z-50 w-64 -translate-x-full bg-base-100 transition-transform duration-200 ease-in-out overflow-y-auto;
@@ -321,6 +362,71 @@
 
   .prose-ru figure {
     @apply overflow-hidden rounded-md;
+  }
+
+  /* ── UFPE ID comments ─────────────────────────────── */
+  .ru-comments {
+    @apply bg-base-100;
+  }
+
+  .ru-comments-header {
+    @apply flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between;
+  }
+
+  .ru-comment-list {
+    @apply space-y-3;
+  }
+
+  .ru-comment-item {
+    @apply flex gap-3 rounded-md bg-base-200 p-4;
+  }
+
+  .ru-comment-avatar {
+    @apply shrink-0 overflow-hidden rounded-full bg-base-300;
+  }
+
+  .ru-comment-content {
+    @apply min-w-0 flex-1 space-y-2;
+  }
+
+  .ru-comment-meta {
+    @apply flex flex-wrap items-center gap-x-2 gap-y-1 text-sm;
+  }
+
+  .ru-comment-meta strong {
+    @apply font-semibold text-base-content;
+  }
+
+  .ru-comment-meta span {
+    @apply text-xs text-base-muted;
+  }
+
+  .ru-comment-text {
+    @apply text-sm leading-7;
+  }
+
+  .ru-comment-awaiting {
+    @apply py-2 text-xs;
+  }
+
+  .ru-comment-login {
+    @apply flex flex-col gap-4 rounded-md bg-base-200 p-4 sm:flex-row sm:items-center sm:justify-between;
+  }
+
+  .ru-comment-form {
+    @apply space-y-3 rounded-md bg-base-200 p-4;
+  }
+
+  .ru-comment-form .comment-reply-title {
+    @apply m-0;
+  }
+
+  .ru-comment-logged-in {
+    @apply m-0 text-sm text-base-muted;
+  }
+
+  .ru-comment-textarea {
+    @apply min-h-32 resize-y bg-base-100;
   }
 
   /* ── Day-of-week color block bar (flat bg strip) ───── */

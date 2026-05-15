@@ -84,6 +84,24 @@ Listar temas instalados:
 wp theme list
 ```
 
+## UFPE ID / Google OAuth
+
+O login publico "UFPE ID" usa Google OAuth 2.0 por baixo e aceita apenas contas verificadas `@ufpe.br`.
+
+Configure as constantes fora do tema, preferencialmente no ambiente ou em `wp-config.php`:
+
+```php
+define( 'RU_UFPE_GOOGLE_CLIENT_ID', 'seu-client-id.apps.googleusercontent.com' );
+define( 'RU_UFPE_GOOGLE_CLIENT_SECRET', 'seu-client-secret' );
+```
+
+No Google Cloud, cadastre a URI de redirecionamento do ambiente:
+
+```text
+http://localhost:8080/wp-admin/admin-post.php?action=ru_ufpe_google_callback
+https://DOMINIO/wp-admin/admin-post.php?action=ru_ufpe_google_callback
+```
+
 Rodar o watcher do Tailwind/Vite no tema:
 
 ```bash

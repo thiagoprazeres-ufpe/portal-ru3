@@ -109,6 +109,18 @@ get_header();
 			</div>
 		<?php endif; ?>
 
+		<?php
+		if ( ! empty( $weekly_menu_data['post'] ) ) {
+			ru_ufpe_theme_render_comments_thread(
+				$weekly_menu_data['post']->ID,
+				array(
+					'title'       => 'Comentários sobre o cardápio semanal',
+					'description' => 'Compartilhe dúvidas e observações sobre o cardápio desta semana.',
+				)
+			);
+		}
+		?>
+
 		<?php endif; ?>
 	</div>
 </main>
