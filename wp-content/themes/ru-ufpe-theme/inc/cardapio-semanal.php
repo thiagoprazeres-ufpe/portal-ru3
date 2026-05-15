@@ -614,7 +614,7 @@ function ru_ufpe_theme_register_cardapio_semanal_post_type() {
 			'show_in_nav_menus'   => false,
 			'exclude_from_search' => true,
 			'menu_icon'           => 'dashicons-calendar-alt',
-			'supports'            => array( 'title' ),
+			'supports'            => array( 'title', 'comments' ),
 		)
 	);
 }

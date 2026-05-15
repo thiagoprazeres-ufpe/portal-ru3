@@ -51,30 +51,40 @@ $header_signature = ru_ufpe_theme_asset_uri('assets/images/brand/institutional/i
 			</a>
 		</div>
 
-		<!-- Right: search -->
-		<div class="relative shrink-0">
-			<button id="search-btn" type="button"
-				class="btn btn-ghost btn-square"
-				aria-label="Abrir busca"
-				aria-expanded="false"
-				aria-controls="search-panel">
-				<i data-lucide="search"></i>
-			</button>
-			<div id="search-panel"
-				class="hidden absolute right-0 top-full mt-2 w-80 rounded-md bg-base-100 p-3 z-50"
-				role="search">
-				<form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex gap-2">
-					<input
-						type="search"
-						name="s"
-						class="input"
-						placeholder="Buscar no portal…"
-						value="<?php echo esc_attr(get_search_query()); ?>"
-						autocomplete="off">
-					<button type="submit" class="btn btn-primary btn-sm shrink-0">Buscar</button>
-				</form>
+		<!-- Right: auth + search -->
+		<div class="flex items-center gap-2">
+			<?php echo ru_ufpe_theme_render_ufpe_id_account(); ?>
+			<div class="relative shrink-0">
+				<button id="search-btn" type="button"
+					class="btn btn-ghost btn-square"
+					aria-label="Abrir busca"
+					aria-expanded="false"
+					aria-controls="search-panel">
+					<i data-lucide="search"></i>
+				</button>
+				<div id="search-panel"
+					class="hidden absolute right-0 top-full mt-2 w-80 rounded-md bg-base-100 p-3 z-50"
+					role="search">
+					<form method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex gap-2">
+						<input
+							type="search"
+							name="s"
+							class="input"
+							placeholder="Buscar no portal…"
+							value="<?php echo esc_attr(get_search_query()); ?>"
+							autocomplete="off">
+						<button type="submit" class="btn btn-primary btn-sm shrink-0">Buscar</button>
+					</form>
+				</div>
 			</div>
 		</div>
 
 	</div>
 </header>
+
+<?php $ufpe_auth_notice = ru_ufpe_theme_get_auth_notice_markup(); ?>
+<?php if ( $ufpe_auth_notice ) : ?>
+	<div class="mx-auto max-w-ru px-4 pt-4">
+		<?php echo $ufpe_auth_notice; ?>
+	</div>
+<?php endif; ?>

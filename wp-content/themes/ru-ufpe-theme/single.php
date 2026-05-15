@@ -43,9 +43,18 @@ get_header();
 			</div>
 		</article>
 
+		<?php
+		ru_ufpe_theme_render_comments_thread(
+			get_the_ID(),
+			array(
+				'title'       => 'Comentários sobre o aviso',
+				'description' => 'Entre com UFPE ID para comentar este aviso.',
+			)
+		);
+		?>
+
 		<?php endwhile; ?>
 	</div>
 </main>
 
 <?php get_footer(); ?>
-
